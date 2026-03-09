@@ -1,0 +1,13 @@
+import fs from "fs"
+
+async function build(){
+
+const idea = await generateIdea()
+
+const page = await generateLanding(idea)
+
+fs.writeFileSync("index.html",page)
+
+}
+
+build()
